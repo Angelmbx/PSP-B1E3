@@ -17,21 +17,23 @@ public class Client {
         //Need this to get Remote properties
         InetAddress i = client.getInetAddress();
 
-        System.out.println("CLIENT providing LOCAL PORT: " + client.getLocalPort());
-        System.out.println("CLIENT providing REMOTE PORT: " + client.getPort());
-        System.out.println("CLIENT providing REMOTE IP: " + i.getHostAddress());
+        System.out.println("CLIENT1 providing LOCAL PORT: " + client.getLocalPort());
+        System.out.println("CLIENT1 providing REMOTE PORT: " + client.getPort());
+        System.out.println("CLIENT1 providing REMOTE IP: " + i.getHostAddress());
 
         //Close
         client.close();
+
+        System.out.println("-----------------------------------------");
 
         //Client2
         Socket client2 = new Socket("localhost", 6000);
 
         InetAddress j = client2.getInetAddress();
 
-        System.out.println("CLIENT providing LOCAL PORT: " + client2.getLocalPort());
-        System.out.println("CLIENT providing REMOTE PORT: " + client2.getPort());
-        System.out.println("CLIENT providing REMOTE IP: " + j.getHostAddress());
+        System.out.println("CLIENT2 providing LOCAL PORT: " + client2.getLocalPort());
+        System.out.println("CLIENT2 providing REMOTE PORT: " + client2.getPort());
+        System.out.println("CLIENT2 providing REMOTE IP: " + j.getHostAddress());
 
         //Close
         client2.close();
