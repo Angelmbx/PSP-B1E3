@@ -23,5 +23,18 @@ public class Client {
 
         //Close
         client.close();
+
+        //Client2
+        Socket client2 = new Socket("localhost", 6000);
+
+        InetAddress j = client2.getInetAddress();
+
+        System.out.println("CLIENT providing LOCAL PORT: " + client2.getLocalPort());
+        System.out.println("CLIENT providing REMOTE PORT: " + client2.getPort());
+        System.out.println("CLIENT providing REMOTE IP: " + j.getHostAddress());
+
+        //Close
+        client2.close();
+
     }
 }
